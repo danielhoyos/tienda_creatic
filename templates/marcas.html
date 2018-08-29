@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+{% endblock title_head %}
+
+{% block content %}
+    <div class="container">
+        <a href="{% url 'add_marca' %}">Agregar marca</a>
+        <h2>Marcas: </h2>
+        {% for x in marcas %}
+            <p>
+                {{ x.nombre }}
+            </p>
+        {% endfor %}
+    </div>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+    Categorias | Tienda
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Categorias</h1>
+        <a href="{% url 'add_categoria' %}">Agregar Categoria</a>
+
+        {% for x in categorias %}
+            <p>
+                {{ x.nombre }}
+            </p>
+        {% endfor %}
+    </div>
+{% endblock %}

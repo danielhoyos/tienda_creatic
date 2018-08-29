@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block titulo_head %}
+    Contácto | Tienda
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-4 pb-4">
+        {% if info_enviada %}
+            <h3>Datos Enviados: </h3>
+            <p><b>Correo: </b> {{ email }}</p>
+            <p><b>Titulo: </b> {{ title }}</p>
+            <p><b>Texto: </b> {{ text }}</p>
+        {% else %}
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ formulario.as_p }}
+                <input type="submit" value="Registrar" type="button" class="btn btn-danger">
+            </form>
+        {% endif %}
+    </div>
+{% endblock%}
+    

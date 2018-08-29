@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title_head %}  
+    Registrarse | Tienda Creatic
+{% endblock title_head %}   
+
+
+{% block content %}
+    <div class="container">
+        <h1>Registrar usuario</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ formulario.as_p }}
+            <input type="submit" value="Enviar" class="btn btn-danger">
+        </form>
+    </div>
+{% endblock content %}
+    

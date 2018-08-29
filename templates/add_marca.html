@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title_head %} 
+    Agregar Marca | Title
+{% endblock title_head %}   
+
+{% block content %}
+    <div class="container">
+        <a href="{% url 'marcas' %}">Ver marcas</a>
+        <h1 class="my-4">Agregar Marca</h1>
+
+        {% load widget_tweaks %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            {% for field in formulario %}
+                {{ field|add_class:"form-control" }}
+            {% endfor %}
+
+            <input type="submit" value="Registrar">
+        </form>
+        
+    </div>
+{% endblock content %}

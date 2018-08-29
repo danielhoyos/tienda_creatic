@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+    Ver Productos | Tienda
+{% endblock title_head %}
+
+{% block content %}
+    <div class="container">
+        <h3 class="my-4">Detalle Producto:</h3>
+        <p>Nombre: {{ producto.nombre }}</p>
+        <p>Precio: {{ producto.precio }}</p>
+        <p>Marca: {{ producto.marca }}</p>
+        <p>Categorias: </p>
+        <ul>
+            {% for c in producto.categoria.all %}
+                <li>{{c}}</li> 
+            {% endfor  %}  
+        </ul>
+
+        <a href="{% url 'productos' %}">Lista productos</a>
+    </div>
+{% endblock content %}

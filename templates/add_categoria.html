@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+    Agregar Categoria | Tienda
+{% endblock title_head %}
+
+{% block content %}
+    <div class="container">
+        <a href="{% url 'categorias' %}">Ver categorias</a>
+        <h2 class="my-4">Agregar Categoria</h2>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ formulario.as_p }}
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+{% endblock content %}

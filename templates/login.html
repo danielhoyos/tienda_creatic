@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+    Ingresar | Tienda
+{% endblock %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center border w-100 h-100">
+        <div class="col-md-4">
+            {% if msg %}
+                <div class="alert alert-danger" role="alert">
+                    {{ msg }}
+                </div>
+            {% endif %}
+            <form class="border border-danger rounded p-4" action="" method="POST">
+                {% csrf_token %}
+                {{ formulario.as_p }}
+                <div class="d-flex">
+                    <input type="submit" class="btn btn-danger ml-auto" value="Ingresar">
+                </div>
+                <a href="{% url 'registrar_usuario' %}" class="text-danger">Registrarse</a>
+            </form>
+        </div>
+        </div>
+    </div>
+{% endblock %}

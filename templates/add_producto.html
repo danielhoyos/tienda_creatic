@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title_head %}
+    Agregar Producto | Tienda
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <a alt="" href="{% url 'productos' %}">Ver productos</a>
+
+        <h2 class="my-4">Agregar productos</h2>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ formulario.as_p }}
+            <input type="submit" value="Registrar">
+        </form>
+    </div>
+{% endblock %}
