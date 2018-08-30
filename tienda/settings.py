@@ -25,7 +25,7 @@ SECRET_KEY = '482#5!^0x7#52z+gkew0_8a%v%ta0b4rjt4#u!33_jq8#y5hzs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [tienda-creatic.herokuapp.com]
 AUTH_PROFILE_MODULE = 'home.Perfil'
 
 
@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'webservices',
     'widget_tweaks',
-    'home'
+    'home',
+    'gunicorn',
+    'psycopg2'
 ]
 
 MIDDLEWARE = [
@@ -80,15 +82,16 @@ WSGI_APPLICATION = 'tienda.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        #'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'tienda_creatic',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'OPTIONS': {
-            'sql_mode': 'traditional',
-        }
+        #'USER': 'root',
+        #'PASSWORD': '',
+        #'HOST': '127.0.0.1',
+        #'PORT': '3306',
+        #'OPTIONS': {
+        #    'sql_mode': 'traditional',
+        #}
     }
 }
 
@@ -130,9 +133,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
+#STATICFILES_DIRS = [
+#   os.path.join(BASE_DIR, "static"),
+#]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media'
