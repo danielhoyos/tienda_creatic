@@ -83,15 +83,12 @@ WSGI_APPLICATION = 'tienda.wsgi.application'
 DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.mysql',
-        'ENGINE': 'django.db.backends.postgres',
-        'NAME': 'db.sqlite3',
-        #'USER': 'root',
-        #'PASSWORD': '',
-        #'HOST': '127.0.0.1',
-        #'PORT': '3306',
-        #'OPTIONS': {
-        #    'sql_mode': 'traditional',
-        #}
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd53s0lkbj5o8n6',
+        'USER': 'fqzgtynzsyrpyz',
+        'PASSWORD': '6dfe9f29fdd89880c40531db54c1896cc82d22b3b0f6f603d177c4a62f0c3558',
+        'HOST': 'ec2-50-17-194-129.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
