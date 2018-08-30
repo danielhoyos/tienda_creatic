@@ -25,7 +25,7 @@ SECRET_KEY = '482#5!^0x7#52z+gkew0_8a%v%ta0b4rjt4#u!33_jq8#y5hzs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [tienda-creatic.herokuapp.com]
+ALLOWED_HOSTS = ['tienda-creatic.herokuapp.com']
 AUTH_PROFILE_MODULE = 'home.Perfil'
 
 
