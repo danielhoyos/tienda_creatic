@@ -84,7 +84,7 @@ DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.mysql',
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'tienda_creatic',
+        'NAME': 'db.sqlite3',
         #'USER': 'root',
         #'PASSWORD': '',
         #'HOST': '127.0.0.1',
